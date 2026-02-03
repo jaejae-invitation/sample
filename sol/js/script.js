@@ -34,7 +34,7 @@ function closeModal() {
 
 
 const weddingAddress = '울산 북구 진장동 125-17 JW컨벤션센터';
-Kakao.init('abcd1234abcd1234abcd1234abcd1234');
+Kakao.init('117377622c5e2d56471d7ffd123893ce');
 // const map = new naver.maps.Map('map', {
 //   center: new naver.maps.LatLng(37.5665, 126.9780), // 임시 중심
 //   zoom: 16
