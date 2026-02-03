@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+ 
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>박정현 ♥ 전다솔 결혼합니다</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- 1. 커버 -->
+  <section id="cover">
+    <img src="images/KakaoTalk_20260202_225109150_10.png" alt="커버 이미지" />
+    <h1>박정현 ♥ 전다솔</h1>
+    <p>2026년 5월 23일 토요일 오후 1시</p>
+  </section>
+
+  <!-- 2. 인사말 -->
+  <section id="greeting">
+    <p>
+      우리는 다정부부<br />
+      왜냐면<br />
+      다랑 정이가 같이 살아서♥
+    </p>
+  </section>
+
+<!-- 3. 갤러리 -->
+<section id="gallery">
+  <div class="gallery-grid">
+    <img src="images/KakaoTalk_20260202_225103755_18.jpg" onclick="openModal(this.src)" />
+    <img src="images/KakaoTalk_20260202_225103755_19.jpg" onclick="openModal(this.src)" />
+    <img src="images/KakaoTalk_20260202_225103755_20.jpg" onclick="openModal(this.src)" />
+    <img src="images/KakaoTalk_20260202_225103755_26.jpg" onclick="openModal(this.src)" />
+    <img src="images/KakaoTalk_20260202_225103755_21.jpg" onclick="openModal(this.src)" />
+    <img src="images/KakaoTalk_20260202_225103755_22.jpg" onclick="openModal(this.src)" />
+    <img src="images/KakaoTalk_20260202_225103755_28.jpg" onclick="openModal(this.src)" />
+    <img src="images/KakaoTalk_20260202_225103755_09.jpg" onclick="openModal(this.src)" />
+    <img src="images/KakaoTalk_20260202_225103755_08.jpg" onclick="openModal(this.src)" />
+  </div>
+</section>
+
+<!-- 이미지 모달 -->
+<div id="image-modal" onclick="closeModal()">
+  <img id="modal-image" />
+</div>
+  <!-- 4. 예식 정보 -->
+  <section id="info">
+    <p>2026년 5월 23일 토요일 오후 1시</p>
+    <p>더컨벤션 웨딩홀 3층</p>
+  </section>
+
+  <!-- 5. 지도 -->
+  <section id="location">
+    <h2>오시는 길</h2>
+    <div id="map" style="width:100%;height:300px;"></div>
+  </section>
+
+  <!-- 6. 계좌 안내 -->
+  <section id="account">
+    <h2>마음 전하실 곳</h2>
+    <div id="account-box" style="display:none;">
+      <p>신랑 박정현 000-0000-0000</p>
+      <p>신부 전다솔 000-0000-0000</p>
+    </div>
+  </section>
+
+  <!-- 7. 공유 -->
+  <section id="share">
+    <button onclick="shareKakao()">카카오톡으로 공유</button>
+  </section>
+
+  <!-- JS -->
+  
+  <!--script type="text/javascript" src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpKeyId=4x0fvqsgeh&submodules=geocoder"></script-->
+  <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+  <script>
+    Kakao.init('117377622c5e2d56471d7ffd123893ce');
+    console.log(Kakao.isInitialized());
+  </script>
+  <script src="js/script.js"></script>
+
+</body>
+</html>
