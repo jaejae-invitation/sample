@@ -35,36 +35,36 @@ function closeModal() {
 
 const weddingAddress = '울산 북구 진장동 125-17 JW컨벤션센터';
 Kakao.init('117377622c5e2d56471d7ffd123893ce');
-// const map = new naver.maps.Map('map', {
-//   center: new naver.maps.LatLng(37.5665, 126.9780), // 임시 중심
-//   zoom: 16
-// });
+const map = new naver.maps.Map('map', {
+  center: new naver.maps.LatLng(37.5665, 126.9780), // 임시 중심
+  zoom: 16
+});
 
-// // 주소 → 좌표 변환
-// naver.maps.Service.geocode(
-//   { query: weddingAddress },
-//   function (status, response) {
-//     if (status !== naver.maps.Service.Status.OK) {
-//       alert('주소를 찾을 수 없습니다.');
-//       return;
-//     }
+// 주소 → 좌표 변환
+naver.maps.Service.geocode(
+  { query: weddingAddress },
+  function (status, response) {
+    if (status !== naver.maps.Service.Status.OK) {
+      alert('주소를 찾을 수 없습니다.');
+      return;
+    }
 
-//     const result = response.v2.addresses[0];
-//     const lat = parseFloat(result.y);
-//     const lng = parseFloat(result.x);
+    const result = response.v2.addresses[0];
+    const lat = parseFloat(result.y);
+    const lng = parseFloat(result.x);
 
-//     const location = new naver.maps.LatLng(lat, lng);
+    const location = new naver.maps.LatLng(lat, lng);
 
-//     // 지도 중심 이동
-//     map.setCenter(location);
+    // 지도 중심 이동
+    map.setCenter(location);
     
-//     // 마커
-//     new naver.maps.Marker({
-//       position: location,
-//       map: map,
-//     });
-//   }
-// );
+    // 마커
+    new naver.maps.Marker({
+      position: location,
+      map: map,
+    });
+  }
+);
 
 // 우클릭 메뉴 차단
 document.addEventListener('contextmenu', function (e) {
