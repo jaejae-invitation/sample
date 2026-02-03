@@ -5,11 +5,11 @@ function toggleAccount() {
 
 function shareKakao() {
   Kakao.Share.sendDefault({
-  objectType: 'text',
-  text: '모바일 청첩장 테스트 중입니다 💍',
+  objectType: 'feed',
+  text: '정현 ♥ 다솔 결혼식에 초대합니다 💍',
   link: {
-    mobileWebUrl: 'https://example.com',
-    webUrl: 'https://example.com'
+    mobileWebUrl: 'https://jaejae-invitation.netlify.app/',
+    webUrl: 'https://jaejae-invitation.netlify.app/'
   }
 });
 }
@@ -30,7 +30,7 @@ function closeModal() {
 
 
 const weddingAddress = '울산 북구 진장동 125-17 JW컨벤션센터';
-
+Kakao.init('abcd1234abcd1234abcd1234abcd1234');
 // const map = new naver.maps.Map('map', {
 //   center: new naver.maps.LatLng(37.5665, 126.9780), // 임시 중심
 //   zoom: 16
@@ -61,3 +61,20 @@ const weddingAddress = '울산 북구 진장동 125-17 JW컨벤션센터';
 //     });
 //   }
 // );
+
+// 우클릭 메뉴 차단
+document.addEventListener('contextmenu', function (e) {
+  e.preventDefault();
+}, true);
+
+// 드래그 시작 차단
+document.addEventListener('dragstart', function (e) {
+  e.preventDefault();
+}, true);
+
+// 마우스 버튼 자체 차단 (우클릭 포함)
+document.addEventListener('mousedown', function (e) {
+  if (e.button === 2) {
+    e.preventDefault();
+  }
+}, true);

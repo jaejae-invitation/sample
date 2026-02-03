@@ -30,15 +30,32 @@
 <!-- 3. 갤러리 -->
 <section id="gallery">
   <div class="gallery-grid">
-    <img src="images/KakaoTalk_20260202_225103755_18.jpg" onclick="openModal(this.src)" />
-    <img src="images/KakaoTalk_20260202_225103755_19.jpg" onclick="openModal(this.src)" />
-    <img src="images/KakaoTalk_20260202_225103755_20.jpg" onclick="openModal(this.src)" />
-    <img src="images/KakaoTalk_20260202_225103755_26.jpg" onclick="openModal(this.src)" />
-    <img src="images/KakaoTalk_20260202_225103755_21.jpg" onclick="openModal(this.src)" />
-    <img src="images/KakaoTalk_20260202_225103755_22.jpg" onclick="openModal(this.src)" />
-    <img src="images/KakaoTalk_20260202_225103755_28.jpg" onclick="openModal(this.src)" />
-    <img src="images/KakaoTalk_20260202_225103755_09.jpg" onclick="openModal(this.src)" />
-    <img src="images/KakaoTalk_20260202_225103755_08.jpg" onclick="openModal(this.src)" />
+    
+    <div class="image-wrapper" onclick="openModal(this.dataset.src)" data-src="images/KakaoTalk_20260202_225103755_18.jpg">
+      <img src="images/KakaoTalk_20260202_225103755_18.jpg" />
+    </div>
+    <div class="image-wrapper" onclick="openModal(this.dataset.src)" data-src="images/KakaoTalk_20260202_225103755_19.jpg">
+      <img src="images/KakaoTalk_20260202_225103755_19.jpg" />
+    </div>
+    <div class="image-wrapper" onclick="openModal(this.dataset.src)" data-src="images/KakaoTalk_20260202_225103755_26.jpg">
+      <img src="images/KakaoTalk_20260202_225103755_26.jpg" />
+    </div>
+    <div class="image-wrapper" onclick="openModal(this.dataset.src)" data-src="images/KakaoTalk_20260202_225103755_21.jpg">
+      <img src="images/KakaoTalk_20260202_225103755_21.jpg" />
+    </div>
+    <div class="image-wrapper" onclick="openModal(this.dataset.src)" data-src="images/KakaoTalk_20260202_225103755_22.jpg">
+      <img src="images/KakaoTalk_20260202_225103755_22.jpg" />
+    </div>
+    <div class="image-wrapper" onclick="openModal(this.dataset.src)" data-src="images/KakaoTalk_20260202_225103755_28.jpg">
+      <img src="images/KakaoTalk_20260202_225103755_28.jpg" />
+    </div>
+    <div class="image-wrapper" onclick="openModal(this.dataset.src)" data-src="images/KakaoTalk_20260202_225103755_09.jpg">
+      <img src="images/KakaoTalk_20260202_225103755_09.jpg" />
+    </div>
+    <div class="image-wrapper" onclick="openModal(this.dataset.src)" data-src="images/KakaoTalk_20260202_225103755_08.jpg">
+      <img src="images/KakaoTalk_20260202_225103755_08.jpg" />
+    </div>
+  
   </div>
 </section>
 
@@ -61,7 +78,7 @@
   <!-- 6. 계좌 안내 -->
   <section id="account">
     <h2>마음 전하실 곳</h2>
-    <div id="account-box" style="display:none;">
+    <div id="account-box">
       <p>신랑 박정현 000-0000-0000</p>
       <p>신부 전다솔 000-0000-0000</p>
     </div>

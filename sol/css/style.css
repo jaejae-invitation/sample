@@ -9,6 +9,12 @@
   box-sizing: border-box;
   font-family: 'WeddingFont', sans-serif;;
 }
+img {
+  -webkit-user-drag: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  pointer-events: none; /* ⭐ 추가 */
+}
 
 body {
   background-color: #f1ece3;
@@ -22,7 +28,7 @@ section {
 }
 #cover {
   width: 100%;
-  height: 100vh;
+  height: 80%;
   background-image: url('../images/cover.jpg');
   background-repeat: no-repeat;
   background-position: center;
@@ -68,12 +74,28 @@ button {
   gap: 6px;
 }
 
-.gallery-grid img {
+/* wrapper를 grid 아이템으로 */
+.gallery-grid .image-wrapper {
+  position: relative;
   width: 100%;
   aspect-ratio: 1 / 1;
+  cursor: pointer;
+}
+
+/* 실제 이미지 */
+.gallery-grid .image-wrapper img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   border-radius: 6px;
-  cursor: pointer;
+  pointer-events: none; /* 이미지 직접 조작 차단 */
+}
+
+/* 저장 방지용 투명 오버레이 */
+.gallery-grid .image-wrapper::after {
+  content: '';
+  position: absolute;
+  inset: 0;
 }
 
 #image-modal {
