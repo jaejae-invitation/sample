@@ -8,7 +8,7 @@ function shareKakao() {
   objectType: 'feed',
   content:{
     title: '정현 ♥ 다솔 결혼식에 초대합니다 💍',
-    description: '2026년 5월 23일 토요일 오후 1시\JW컨벤션센터',
+    description: '2026년 5월 23일 토요일 오후 1시\nJW컨벤션센터',
     imageUrl: '../images/KakaoTalk_20260202_225103755_01.jpg',
     link: {
       mobileWebUrl: 'https://jaejae-invitation.netlify.app/',
